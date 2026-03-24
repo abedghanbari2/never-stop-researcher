@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "hooks": {
+    "sessionStart": [
+      {
+        "command": "./hooks/research-session-init.py"
+      }
+    ],
+    "stop": [
+      {
+        "command": "./hooks/never-stop-continue.py",
+        "loop_limit": null
+      }
+    ],
+    "preCompact": [
+      {
+        "command": "./hooks/checkpoint-reminder.py"
+      }
+    ]
+  }
+}
